@@ -7,8 +7,8 @@ import main.java.djikstra.module.Edge;
 import main.java.djikstra.module.Vertex;
 
 public class Graph {
-    public LinkedList<Vertex> vertexList;
-    public LinkedList<Edge> paths;
+    private LinkedList<Vertex> vertexList;
+    private LinkedList<Edge> paths;
     
     public Graph(){
         vertexList = new LinkedList<Vertex>();
@@ -18,15 +18,27 @@ public class Graph {
         vertexList.add(Vertex(a));
     }
 
-    public void returnVertexNames(){
+    public void returnVertexList(){
         for(i = 0; i < vertexList.length; i++){
             vertexList(i).getName();
         }
     }
 
-    public void makeEdge(Vertex source, Vertex dest, Int length){
+    public String getVertByName(String name){
+        Vertex wantedVert;
+        if (vertexList.contains(name)){
+            wantedVert = vertexlist.get(name);
+        }
+        return wantedVert;
+    }
+
+    public void addEdge(Vertex source, Vertex dest, Int length){
         if (!paths.contains(Edge(source, dest, length)))
             paths.add(source, dest, length);
+    }
+
+    public void setupNeighbors(){
+        
     }
 
     public void linkVerts(){
@@ -36,6 +48,5 @@ public class Graph {
                 makeEdge(currentVert, currentNeighbor.getKey(), currentNeighbor.getValue());
             }
         }
-
     }
 }

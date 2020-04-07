@@ -3,13 +3,13 @@ package main.java.djikstra.module;
 import java.util.HashMap;
 
 public class Vertex {
-    //Hashmap gjør at man kan legge
+    //Hashmap gjør at man kan legge til både naboer og avstander
     public HashMap neighborMap;
     private String name;
 
     public Vertex(String vName){
         this.name = vName;
-        this.neighborMap = new HashMap<Vertex, Int>();
+        this.neighborMap = new HashMap<Vertex, Int>(); 
     }
 
     public void addNeighbor(Vertex v, int length){
