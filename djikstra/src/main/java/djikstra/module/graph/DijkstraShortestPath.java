@@ -35,11 +35,11 @@ public class DijkstraShortestPath {
         }
     }
 
-    public List<Vertex> getShortestPathTo(Vertex targetVertex){
-        List<Vertex> path = new ArrayList<>();
+    public List<String> getShortestPathTo(Vertex targetVertex){
+        List<String> path = new ArrayList<>();
 
         for(Vertex vertex = targetVertex; vertex != null; vertex = vertex.getPredecessor()){
-            path.add(vertex);
+            path.add(vertex.getName());
         }
 
         Collections.reverse(path);
