@@ -1,17 +1,18 @@
 package main.java.djikstra.module.graph;
 
 import java.util.Iterator;
-import java.util.LinkedList;
+import java.util.ArrayList;
 
 import main.java.djikstra.module.Edge;
 import main.java.djikstra.module.Vertex;
 
 public class Graph {
-    private LinkedList<Vertex> vertexList;
-    private LinkedList<Edge> paths;
+/*    
+    private ArrayList<Vertex> vertexList;
+    private ArrayList<Edge> paths;
     
     public Graph(){
-        vertexList = new LinkedList<Vertex>();
+        vertexList = new ArrayList<Vertex>();
     }
 
     public void addVertex(String a){
@@ -45,8 +46,8 @@ public class Graph {
         for(i = 0; i < vertexList.length; i++){
             Vertex currentVert = vertexList(i);
             for(Map.Entry<Vertex, Int> currentNeighbor : currentVert.neighborMap.currentNeighborSet()){
-                makeEdge(currentVert, currentNeighbor.getKey(), currentNeighbor.getValue());
+                addEdge(currentVert, currentNeighbor.getKey(), currentNeighbor.getValue());
             }
         }
-    }
+    } */
 }
